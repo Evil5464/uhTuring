@@ -1,5 +1,6 @@
 package uhv1.Negocio;
 
+import uhv1.ControlPrincipal;
 import uhv1.Persistencia.DAOEvento;
 import uhv1.Vistas.VentanaGestionEvento;
 
@@ -20,4 +21,13 @@ public class ControlGestionEvento {
         ventGes.setVisible(true);
     }
     
+     public void bajaEvento(){
+        ControlBajaEvento bajaEvent = new ControlBajaEvento(dahoeven, even);
+        bajaEvent.inicia();
+     }
+     
+     public void botonCancelar(){
+         ControlPrincipal ctrlPrincipal = new ControlPrincipal();
+         ctrlPrincipal.inicia();
+     }
 }

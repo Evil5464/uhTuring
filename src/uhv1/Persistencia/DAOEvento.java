@@ -64,4 +64,22 @@ public class DAOEvento {
             return null;
         }
     }
+    
+    public boolean eliminaEvent(Evento even){
+        System.out.println("DAO ELIMINA");
+        int resultado = 0;
+        try {
+            // Statement = declaracion
+            Statement statement;
+            statement = ManejadorBD.dameConnection().createStatement();
+            resultado = statement.executeUpdate("DELETE FROM Evento WHERE nombre_evento='" + even.getNombre() + "'AND fecha_reservacion='" + even.getFechaReservacion() + "';" );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(resultado==0){
+            return false;
+        }else{
+            return true;
+        }
+    }
 }
