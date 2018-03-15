@@ -73,6 +73,10 @@ public class Evento {
             return false;
         }
     }
+    
+    public int getId(){
+        return id;
+    }
 
     @Override
     public String toString() {

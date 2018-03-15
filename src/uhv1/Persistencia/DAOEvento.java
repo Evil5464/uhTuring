@@ -65,14 +65,15 @@ public class DAOEvento {
         }
     }
     
+    //Metodo que recibe un evento y lo elimina en la base de datos (Caso de uso CancelarEvento)
     public boolean eliminaEvent(Evento even){
         System.out.println("DAO ELIMINA");
         int resultado = 0;
         try {
             // Statement = declaracion
             Statement statement;
-            statement = ManejadorBD.dameConnection().createStatement();
-            resultado = statement.executeUpdate("DELETE FROM Evento WHERE nombre_evento='" + even.getNombre() + "'AND fecha_reservacion='" + even.getFechaReservacion() + "';" );
+            statement = ManejadorBD.dameConnection().createStatement();   
+            resultado = statement.executeUpdate("DELETE FROM Evento WHERE idEvento=" + even.getId() + ";" ); //busca en bd al evento por su id y lo elimina 
         } catch (SQLException e) {
             e.printStackTrace();
         }
