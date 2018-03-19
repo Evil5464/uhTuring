@@ -17,12 +17,16 @@ public class ControlBuscaEvento {
         this.daoeven = daoeven;
     }
 
+    ControlBuscaEvento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /* Este metodo recibe mensaje de control ventana evento y despliega la ventana busca evento*/
     public void inicia() {
         VentanaBuscaEvento ventEven = new VentanaBuscaEvento(this);
         ventEven.setVisible(true);
     }
-
+    
     /* Este metodo recibe mensaje de la ventana busca evento con el nombre del evento 
     a buscar, este le envia un mensaje al dao con estos datos para buscar al evento*/
     
