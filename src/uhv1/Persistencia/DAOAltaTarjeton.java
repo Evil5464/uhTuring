@@ -9,7 +9,7 @@ import uhv1.Negocio.Casa;
 import uhv1.Negocio.ControlAltaTarjeton;
 import uhv1.Negocio.Responsable;
 
-public class DAOTarjeton {
+public class DAOAltaTarjeton {
     
     public void insertaTarjeton(Responsable hab, String plac) throws SQLException{
         java.sql.Date fechaActual; //calcula la fecha actual
@@ -36,7 +36,7 @@ public class DAOTarjeton {
         Casa cas = new Casa(1, "D", 105);
         String placas = "123ACDC";
         Responsable hab = new Responsable(1, "Eleazar", "Morales", "Garduño", 12312412, cas, 20);
-        DAOTarjeton dao = new DAOTarjeton();
+        DAOAltaTarjeton dao = new DAOAltaTarjeton();
         dao.insertaTarjeton(hab, placas);
     }
 }

@@ -2,7 +2,7 @@ package uhv1.Negocio;
 
 import java.sql.Date;
 
-public class Tarjeton {
+public class TarjetonAlta {
     private Responsable hab;
     private int num_estacionamiento;
     private String placas;
@@ -10,10 +10,10 @@ public class Tarjeton {
     private java.sql.Date fecha_vencimiento;
     private String estado;
 
-    public Tarjeton() {//Constructor vacio 
+    public TarjetonAlta() {//Constructor vacio 
     }
 
-    public Tarjeton(Responsable hab, int num_estacionamiento, String placas, Date fecha_impresion, Date fecha_vencimiento, String estado) {
+    public TarjetonAlta(Responsable hab, int num_estacionamiento, String placas, Date fecha_impresion, Date fecha_vencimiento, String estado) {
         this.hab = hab;
         this.num_estacionamiento = num_estacionamiento;
         this.placas = placas;
